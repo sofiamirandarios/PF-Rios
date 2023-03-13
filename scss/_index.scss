@@ -1,18 +1,4 @@
-@mixin tablet{
-    @media screen and (max-width: 900px) {
-        @content;
-    }
-}
-@mixin intermediate{
-    @media screen and (max-width: 650px) {
-        @content;
-    }
-}
-@mixin mobile{
-    @media screen and (max-width: 450px){
-        @content;
-    }
-}
+@use "./_mediaqueries.scss" as *;
 *{
     margin: 0;
     padding: 0;
@@ -35,10 +21,6 @@ header {
         justify-content: space-between;
         align-items: center;
         padding: 40px;
-        @include mobile{
-            justify-content: center;
-            align-content: center;
-        }
     }
     #logo {
         display: flex;
@@ -47,8 +29,7 @@ header {
         width: 500px;
         margin-right: 10px;
         @include mobile{
-            width: 350px;
-            margin: none;
+            width: 200px;
         }
     }
 }

@@ -24,12 +24,6 @@ header .container-fluid {
   align-items: center;
   padding: 40px;
 }
-@media screen and (max-width: 450px) {
-  header .container-fluid {
-    justify-content: center;
-    align-content: center;
-  }
-}
 header #logo {
   display: flex;
 }
@@ -39,8 +33,7 @@ header #logo img {
 }
 @media screen and (max-width: 450px) {
   header #logo img {
-    width: 350px;
-    margin: none;
+    width: 200px;
   }
 }
 
