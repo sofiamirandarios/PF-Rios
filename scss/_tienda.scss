@@ -1,0 +1,51 @@
+/*TIENDA*/
+@mixin tablet{
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+@mixin intermediate{
+    @media screen and (max-width: 650px) {
+        @content;
+    }
+}
+@mixin mobile{
+    @media screen and (max-width: 450px){
+        @content;
+    }
+}
+main{
+    #artContainer{
+        margin-top: 50px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(2 1fr);
+        grid-template-rows: repeat(2 1fr);
+        column-gap: 15px;
+        row-gap: 15px;
+        grid-template-areas:
+        "art1 art2"
+        "art3 art4";
+        .art1{
+            grid-area: art1;
+        }
+        .art2{
+            grid-area: art2;
+        }
+        .art3{
+            grid-area: art3;
+        }
+        .art4{
+            grid-area: art4;
+        }
+        .btn{
+            margin-top: 15px;
+        }
+        .fieldset{
+            font-family: 'Roboto';
+            display: grid;
+            align-items: center;
+        }
+    }
+}

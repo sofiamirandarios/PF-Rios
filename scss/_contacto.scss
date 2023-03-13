@@ -1,0 +1,39 @@
+/*CONTACTO*/
+@mixin tablet{
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+@mixin intermediate{
+    @media screen and (max-width: 650px) {
+        @content;
+    }
+}
+@mixin mobile{
+    @media screen and (max-width: 450px){
+        @content;
+    }
+}
+main{
+    #formContainer{
+        margin: 5% 5% 5% 5%;
+        display: grid;
+        justify-items: center;
+        #form{
+            display: grid;
+            justify-items: start;
+            .col-3{
+                margin-top: 15px;
+                }
+                .col-md-6{
+                margin-top: 15px;
+                }
+                .col-md-9{
+                margin-top: 15px;
+                }
+                .form-check{
+                margin-top: 15px;
+                }
+            }
+        }
+}

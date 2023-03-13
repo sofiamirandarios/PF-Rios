@@ -1,0 +1,39 @@
+/*MÚSICA*/
+@mixin tablet{
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+@mixin intermediate{
+    @media screen and (max-width: 650px) {
+        @content;
+    }
+}
+@mixin mobile{
+    @media screen and (max-width: 450px){
+        @content;
+    }
+}
+main{
+    .musicaYouTubeContainer{
+        display: grid;
+        grid-template-columns: repeat(2 1fr);
+        grid-template-rows: repeat(2 1fr);
+        grid-template-areas: 
+        "video1 video2"
+        "video3 video4";
+        justify-items: center;
+            .video1{
+                grid-area: video1;
+            }
+            .video2{
+                grid-area: video2;
+            }
+            .video3{
+                grid-area: video3;
+            }
+            .video4{
+                grid-area: video4;
+            }
+    }
+}

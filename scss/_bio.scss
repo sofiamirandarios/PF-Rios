@@ -1,0 +1,28 @@
+/*BIO*/
+@mixin tablet{
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+@mixin intermediate{
+    @media screen and (max-width: 650px) {
+        @content;
+    }
+}
+@mixin mobile{
+    @media screen and (max-width: 450px){
+        @content;
+    }
+}
+main{
+    #carouselExample{
+        margin-left: 5%;
+        margin-right: 5%;
+        }
+        .contenedorTextoBio{
+        font-family: Roboto;
+        margin: 5% 5% 5% 5%;
+        display: grid;
+        grid-template-columns: 1;
+        }
+}

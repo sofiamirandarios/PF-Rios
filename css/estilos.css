@@ -11,9 +11,7 @@ html {
 a {
   text-decoration: none;
   color: black;
-}
-
-/*INDEX*/
+} /*INDEX*/
 header {
   font-family: "Roboto";
   font-size: 30px;
@@ -26,12 +24,24 @@ header .container-fluid {
   align-items: center;
   padding: 40px;
 }
+@media screen and (max-width: 450px) {
+  header .container-fluid {
+    justify-content: center;
+    align-content: center;
+  }
+}
 header #logo {
   display: flex;
 }
 header #logo img {
   width: 500px;
   margin-right: 10px;
+}
+@media screen and (max-width: 450px) {
+  header #logo img {
+    width: 350px;
+    margin: none;
+  }
 }
 
 main .principal {
@@ -45,8 +55,42 @@ main .principal .contenedorPortada {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 900px) {
+  main .principal .contenedorPortada {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .principal .contenedorPortada {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .principal .contenedorPortada {
+    width: 100%;
+    justify-content: center;
+  }
+}
 main .principal .portadaRdt {
   width: 100%;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  main .principal .portadaRdt {
+    width: 890px;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .principal .portadaRdt {
+    width: 650px;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .principal .portadaRdt {
+    width: 450px;
+  }
 }
 main .mediaContainer {
   margin-top: 30px;
@@ -85,27 +129,25 @@ main .contenedorTextoBio {
   grid-template-columns: 1;
 }
 
-/*CONTACTO*/
-main #formContainer {
-  margin: 5% 5% 5% 5%;
+/*MÚSICA*/
+main .musicaYouTubeContainer {
   display: grid;
+  grid-template-columns: repeat(2 1fr);
+  grid-template-rows: repeat(2 1fr);
+  grid-template-areas: "video1 video2" "video3 video4";
   justify-items: center;
 }
-main #formContainer #form {
-  display: grid;
-  justify-items: start;
+main .musicaYouTubeContainer .video1 {
+  grid-area: video1;
 }
-main #formContainer #form .col-3 {
-  margin-top: 15px;
+main .musicaYouTubeContainer .video2 {
+  grid-area: video2;
 }
-main #formContainer #form .col-md-6 {
-  margin-top: 15px;
+main .musicaYouTubeContainer .video3 {
+  grid-area: video3;
 }
-main #formContainer #form .col-md-9 {
-  margin-top: 15px;
-}
-main #formContainer #form .form-check {
-  margin-top: 15px;
+main .musicaYouTubeContainer .video4 {
+  grid-area: video4;
 }
 
 /*TIENDA*/
@@ -141,86 +183,27 @@ main #artContainer .fieldset {
   align-items: center;
 }
 
-/*MÚSICA*/
-main .musicaYouTubeContainer {
+/*CONTACTO*/
+main #formContainer {
+  margin: 5% 5% 5% 5%;
   display: grid;
-  grid-template-columns: repeat(2 1fr);
-  grid-template-rows: repeat(2 1fr);
-  grid-template-areas: "video1 video2" "video3 video4";
   justify-items: center;
 }
-main .musicaYouTubeContainer .video1 {
-  grid-area: video1;
+main #formContainer #form {
+  display: grid;
+  justify-items: start;
 }
-main .musicaYouTubeContainer .video2 {
-  grid-area: video2;
+main #formContainer #form .col-3 {
+  margin-top: 15px;
 }
-main .musicaYouTubeContainer .video3 {
-  grid-area: video3;
+main #formContainer #form .col-md-6 {
+  margin-top: 15px;
 }
-main .musicaYouTubeContainer .video4 {
-  grid-area: video4;
+main #formContainer #form .col-md-9 {
+  margin-top: 15px;
 }
-
-@media screen and (max-width: 900px) {
-  .contenedorPortada {
-    width: 100%;
-    justify-content: center;
-  }
-  #logo img {
-    height: 100px;
-    margin-right: 10px;
-  }
-  .navbar-brand {
-    max-width: 300px;
-  }
-  .mediaContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
-  }
-  #artContainer {
-    margin-top: 50px;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 1fr;
-    grid-template-areas: "art1" "art2" "art3" "art4";
-  }
-}
-@media screen and (max-width: 450px) {
-  .contenedorPortada {
-    width: 100%;
-    justify-content: center;
-  }
-  .portadaRdt {
-    width: 350px;
-  }
-  #logo img {
-    height: 80px;
-    margin-right: 10px;
-  }
-  .navbar-brand {
-    max-width: 300px;
-  }
-  .mediaContainer {
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
-  .videoclipIndex {
-    display: none;
-  }
-  .pieDePagina {
-    align-content: center;
-    justify-content: center;
-  }
-  .musicaYouTubeContainer {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4 1fr);
-    grid-template-areas: "video1" "video2" "video3" "video4";
-    justify-items: center;
-  }
+main #formContainer #form .form-check {
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=estilos.css.map */
