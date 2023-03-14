@@ -1,26 +1,18 @@
 @use "./_mediaqueries.scss" as *;
-*{
-    margin: 0;
-    padding: 0;
-}
-html{ 
-    font-family: 'Roboto';
-}
-a{
-    text-decoration: none;
-    color: black;
-}/*INDEX*/
+@use "variables";
+
+/*INDEX*/
 
 header {
-    font-family: 'Roboto';
-    font-size: 30px;
-    .container-fluid {
+        .container-fluid {
         display: flex;
         min-height: 120px;
         background: white;
         justify-content: space-between;
         align-items: center;
         padding: 40px;
+        font-family: variables.$font_title;
+        font-size: 30px;
     }
     #logo {
         display: flex;
