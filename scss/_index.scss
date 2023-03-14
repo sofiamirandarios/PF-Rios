@@ -8,47 +8,6 @@
     padding: 0;
 }
 
-header {
-        .container-fluid {
-        display: flex;
-        min-height: 120px;
-        background: white;
-        justify-content: space-between;
-        align-items: center;
-        padding: 40px;
-        font-family: variables.$font_title;
-        font-size: 30px;
-    }
-    #logo {
-        display: flex;
-    }
-    #logo img {
-        width: 500px;
-        margin-right: 10px;
-        @include mobile{
-            width: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        @include intermediate{
-            width: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        }
-    }
-    #navbarNav {
-        justify-content: flex-end;
-        @include tablet{
-            justify-content: flex-start;
-        }
-        @include intermediate{
-            justify-content: flex-start;
-        }
-    }
-}
-
 main{
     .principal{
         display: grid;

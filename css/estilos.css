@@ -5,53 +5,6 @@
   padding: 0;
 }
 
-header .container-fluid {
-  display: flex;
-  min-height: 120px;
-  background: white;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-  font-family: "Roboto", sans-serif;
-  font-size: 30px;
-}
-header #logo {
-  display: flex;
-}
-header #logo img {
-  width: 500px;
-  margin-right: 10px;
-}
-@media screen and (max-width: 450px) {
-  header #logo img {
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 450px) and (max-width: 650px) {
-  header #logo img {
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-header #navbarNav {
-  justify-content: flex-end;
-}
-@media screen and (max-width: 900px) {
-  header #navbarNav {
-    justify-content: flex-start;
-  }
-}
-@media screen and (max-width: 650px) {
-  header #navbarNav {
-    justify-content: flex-start;
-  }
-}
-
 main .principal {
   display: grid;
   grid-template-columns: 1;
@@ -338,6 +291,56 @@ main #formContainer #form .col-12 {
 }
 main #formContainer #form .button {
   margin-top: 30px;
+}
+
+header .container-fluid {
+  display: flex;
+  min-height: 120px;
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+}
+header #logo {
+  display: flex;
+}
+header #logo img {
+  width: 500px;
+  margin-right: 10px;
+}
+@media screen and (max-width: 450px) {
+  header #logo img {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 450px) and (max-width: 650px) {
+  header #logo img {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+header #navbarNav {
+  justify-content: flex-end;
+}
+header #navbarNav #link_navbar:hover {
+  color: #43755f;
+}
+@media screen and (max-width: 900px) {
+  header #navbarNav {
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 650px) {
+  header #navbarNav {
+    justify-content: flex-start;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
