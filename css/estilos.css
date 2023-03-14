@@ -1,9 +1,10 @@
 @charset "UTF-8";
 /*INDEX*/
-header {
-  font-family: "Roboto";
-  font-size: 30px;
+* {
+  margin: 0;
+  padding: 0;
 }
+
 header .container-fluid {
   display: flex;
   min-height: 120px;
@@ -11,6 +12,8 @@ header .container-fluid {
   justify-content: space-between;
   align-items: center;
   padding: 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
 }
 header #logo {
   display: flex;
@@ -22,6 +25,30 @@ header #logo img {
 @media screen and (max-width: 450px) {
   header #logo img {
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 450px) and (max-width: 650px) {
+  header #logo img {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+header #navbarNav {
+  justify-content: flex-end;
+}
+@media screen and (max-width: 900px) {
+  header #navbarNav {
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 650px) {
+  header #navbarNav {
+    justify-content: flex-start;
   }
 }
 
@@ -35,42 +62,27 @@ main .principal {
 main .principal .contenedorPortada {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 1400px;
 }
-@media screen and (max-width: 900px) {
-  main .principal .contenedorPortada {
-    width: 100%;
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 650px) {
-  main .principal .contenedorPortada {
-    width: 100%;
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 450px) {
-  main .principal .contenedorPortada {
-    width: 100%;
-    justify-content: center;
-  }
-}
-main .principal .portadaRdt {
+main .principal .contenedorPortada .portadaRdt {
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 900px) {
-  main .principal .portadaRdt {
-    width: 890px;
+  main .principal .contenedorPortada .portadaRdt {
+    width: 100%;
   }
 }
 @media screen and (max-width: 650px) {
-  main .principal .portadaRdt {
-    width: 650px;
+  main .principal .contenedorPortada .portadaRdt {
+    width: 100%;
   }
 }
 @media screen and (max-width: 450px) {
-  main .principal .portadaRdt {
-    width: 450px;
+  main .principal .contenedorPortada .portadaRdt {
+    width: 100%;
   }
 }
 main .mediaContainer {
@@ -83,13 +95,44 @@ main .mediaContainer .spotifyIndex {
   width: 350px;
   align-self: center;
 }
+@media screen and (max-width: 450px) {
+  main .mediaContainer .spotifyIndex {
+    width: 270px;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .mediaContainer .videoclipIndex {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  main .mediaContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .mediaContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .mediaContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .pieDePagina {
   margin-top: 30px;
   display: flex;
   flex-direction: row;
   height: 90px;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -108,6 +151,19 @@ main .contenedorTextoBio {
   margin: 5% 5% 5% 5%;
   display: grid;
   grid-template-columns: 1;
+}
+@media screen and (max-width: 650px) {
+  main .contenedorTextoBio .titulo {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .contenedorTextoBio .titulo {
+    text-align: center;
+  }
+}
+main .contenedorTextoBio .texto {
+  text-align: justify;
 }
 
 /*MÚSICA*/
@@ -129,6 +185,61 @@ main .musicaYouTubeContainer .video3 {
 }
 main .musicaYouTubeContainer .video4 {
   grid-area: video4;
+}
+@media screen and (max-width: 900px) {
+  main .musicaYouTubeContainer {
+    justify-items: center;
+    grid-template-areas: "video1 video1" "video2 video2" "video3 video3" "video4 video4";
+  }
+  main .musicaYouTubeContainer .video1 {
+    grid-area: video1;
+  }
+  main .musicaYouTubeContainer .video2 {
+    grid-area: video2;
+  }
+  main .musicaYouTubeContainer .video3 {
+    grid-area: video3;
+  }
+  main .musicaYouTubeContainer .video4 {
+    grid-area: video4;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .musicaYouTubeContainer {
+    justify-items: center;
+    grid-template-areas: "video1 video1" "video2 video2" "video3 video3" "video4 video4";
+  }
+  main .musicaYouTubeContainer .video1 {
+    grid-area: video1;
+  }
+  main .musicaYouTubeContainer .video2 {
+    grid-area: video2;
+  }
+  main .musicaYouTubeContainer .video3 {
+    grid-area: video3;
+  }
+  main .musicaYouTubeContainer .video4 {
+    grid-area: video4;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .musicaYouTubeContainer {
+    justify-items: center;
+    align-content: center;
+    grid-template-areas: "video1 video1" "video2 video2" "video3 video3" "video4 video4";
+  }
+  main .musicaYouTubeContainer .video1 {
+    grid-area: video1;
+  }
+  main .musicaYouTubeContainer .video2 {
+    grid-area: video2;
+  }
+  main .musicaYouTubeContainer .video3 {
+    grid-area: video3;
+  }
+  main .musicaYouTubeContainer .video4 {
+    grid-area: video4;
+  }
 }
 
 /*TIENDA*/
@@ -163,6 +274,23 @@ main #artContainer .fieldset {
   display: grid;
   align-items: center;
 }
+@media screen and (max-width: 900px) {
+  main #artContainer {
+    grid-template-areas: "art1 art1" "art2 art2" "art3 art3" "art4 art4";
+  }
+  main #artContainer .art1 {
+    grid-area: art1;
+  }
+  main #artContainer .art2 {
+    grid-area: art2;
+  }
+  main #artContainer .art3 {
+    grid-area: art3;
+  }
+  main #artContainer .art4 {
+    grid-area: art4;
+  }
+}
 
 /*CONTACTO*/
 main #formContainer {
@@ -180,11 +308,36 @@ main #formContainer #form .col-3 {
 main #formContainer #form .col-md-6 {
   margin-top: 15px;
 }
+main #formContainer #form .col-md-6 #inputEmail4:invalid {
+  background-color: white;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
 main #formContainer #form .col-md-9 {
   margin-top: 15px;
 }
-main #formContainer #form .form-check {
+@media screen and (max-width: 900px) {
+  main #formContainer #form .col-md-9 #inputMessage {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 650px) {
+  main #formContainer #form .col-md-9 #inputMessage {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 450px) {
+  main #formContainer #form .col-md-9 #inputMessage {
+    width: 300px;
+  }
+}
+main #formContainer #form .col-12 {
   margin-top: 15px;
+  margin-bottom: 15px;
+}
+main #formContainer #form .button {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -3,6 +3,11 @@
 
 /*INDEX*/
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 header {
         .container-fluid {
         display: flex;
@@ -22,6 +27,24 @@ header {
         margin-right: 10px;
         @include mobile{
             width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        @include intermediate{
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        }
+    }
+    #navbarNav {
+        justify-content: flex-end;
+        @include tablet{
+            justify-content: flex-start;
+        }
+        @include intermediate{
+            justify-content: flex-start;
         }
     }
 }
@@ -36,32 +59,25 @@ main{
         .contenedorPortada{
             display: flex;
             justify-content: center;
-            @include tablet{
+            align-items: center;
+            width: 1400px;
+            
+            .portadaRdt{
                 width: 100%;
                 justify-content: center;
-            }
-            @include intermediate{
-                width: 100%;
-                justify-content: center;
-            }
-            @include mobile{
-                width: 100%;
-                justify-content: center;
+                align-items: center;
+                @include tablet{
+                    width: 100%;
+                }
+                @include intermediate{
+                    width: 100%;
+                }
+                @include mobile{
+                    width: 100%;
+                }
             }
         }
-        .portadaRdt{
-            width: 100%;
-            justify-content: center;
-            @include tablet{
-                width: 890px;
-            }
-            @include intermediate{
-                width: 650px;
-            }
-            @include mobile{
-                width: 450px;
-            }
-        }
+        
     }
     .mediaContainer{
         margin-top: 30px;
@@ -71,6 +87,29 @@ main{
         .spotifyIndex{
             width: 350px;
             align-self: center;
+            @include mobile{
+                width: 270px;
+            }
+        }
+        .videoclipIndex{
+            @include mobile{
+                display: none;
+            }
+        }
+        @include tablet{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @include intermediate{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @include mobile{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
@@ -80,7 +119,7 @@ main{
     display: flex;
     flex-direction: row;
     height: 90px;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     align-items: center;
     .icon{

@@ -10,5 +10,16 @@ main{
         margin: 5% 5% 5% 5%;
         display: grid;
         grid-template-columns: 1;
+            .titulo{
+                @include intermediate{
+                    text-align: center;
+                }
+                @include mobile{
+                    text-align: center;
+                }
+            }
+            .texto{
+                text-align: justify;
+            }
         }
 }

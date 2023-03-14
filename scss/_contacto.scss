@@ -8,17 +8,39 @@ main{
         #form{
             display: grid;
             justify-items: start;
-            .col-3{
-                margin-top: 15px;
+                .col-3{
+                    margin-top: 15px;
                 }
                 .col-md-6{
-                margin-top: 15px;
+                    margin-top: 15px;
+                    #inputEmail4:invalid{
+                        background-color: white;
+                        border: none;
+                        outline: 2px solid red;
+                        border-radius: 5px;
+                    }
                 }
                 .col-md-9{
-                margin-top: 15px;
+                    margin-top: 15px;
+                    #inputMessage{
+                        @include tablet{
+                            width: 700px;
+                        }
+                        @include intermediate{
+                            width: 500px;
+                        }
+                        @include mobile{
+                            width: 300px;
+                        }
+                    }
+                
                 }
-                .form-check{
-                margin-top: 15px;
+                .col-12{
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
+                .button{
+                    margin-top: 30px;
                 }
             }
         }
