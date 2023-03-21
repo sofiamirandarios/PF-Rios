@@ -1,46 +1,29 @@
 @use "./_mediaqueries.scss" as *;
 @use "variables";
 
-header {
-    .container-fluid {
-    display: flex;
-    min-height: 120px;
-    background: white;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    font-family: variables.$font_title;
-    font-size: 30px;
-}
-#logo {
-    display: flex;
-}
-#logo img {
-    width: 500px;
-    margin-right: 10px;
-    @include mobile{
-        width: 200px;
+.navbar{
+    .container-fluid{
         display: flex;
-        justify-content: center;
         align-items: center;
-    @include intermediate{
-        width: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    }
-}
-#navbarNav {
-    justify-content: flex-end;
-    #link_navbar:hover{
-        color: variables.$hover_color;
-    }
-    @include tablet{
-        justify-content: flex-start;
-    }
-    @include intermediate{
-        justify-content: flex-start;
-    }
-}
+        justify-content: space-between;
+        .imgnav{
+            margin-left: 30px;
+            margin-right: 50px;
+            height: 70px;
+        }
+        .navbar-toggler{
+            color: white;
+            margin-right: 30px;
+        }
+        ul{
+            justify-content: space-between;
+            .nav-link{
+                text-align: end;
+                margin-right: 10px;
+                font-size: 20px;
+                font-family: barlow;
+            }
+        }
+        
+    } 
 }
