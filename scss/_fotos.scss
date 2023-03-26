@@ -1,0 +1,48 @@
+/*TIENDA*/
+@use "./_mediaqueries.scss" as *;
+
+body{
+    .page-title{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        .title{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 3rem;
+            @include mobile{
+                font-size: 2rem;
+            }
+        }
+    }
+    main{
+        .container{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            .row{
+                @include tablet{
+                    display: grid;
+                    grid-template-columns: 1;
+                }
+                @include intermediate{
+                    display: grid;
+                    grid-template-columns: 1;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+                @include mobile{
+                    display: grid;
+                    grid-template-columns: 1;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+                .carousel-text{
+                    font-size: medium;
+                    font-family: 'Josefin Sans', sans-serif;
+                    margin-top: 10px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    
+}

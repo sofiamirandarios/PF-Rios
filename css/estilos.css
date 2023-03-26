@@ -1,50 +1,70 @@
 @charset "UTF-8";
+.navbar {
+  width: 100%;
+}
 .navbar .container-fluid {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .navbar .container-fluid .imgnav {
-  margin-left: 30px;
-  margin-right: 50px;
-  height: 70px;
+  margin-left: 40px;
+  max-height: 40px;
+}
+@media screen and (max-width: 450px) {
+  .navbar .container-fluid .imgnav {
+    height: 25px;
+  }
 }
 .navbar .container-fluid .navbar-toggler {
   color: white;
   margin-right: 30px;
 }
-.navbar .container-fluid ul {
+.navbar .container-fluid .navbar-toggler .navbar-toggler-icon {
+  color: white;
+}
+.navbar .container-fluid .navbar-nav {
+  text-align: right;
   justify-content: space-between;
 }
-.navbar .container-fluid ul .nav-link {
+.navbar .container-fluid .navbar-nav .nav-link {
   text-align: end;
   margin-right: 10px;
-  font-size: 20px;
-  font-family: barlow;
+  font-size: 15px;
+  font-family: raleway;
 }
 
 /*INDEX*/
 * {
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 main .principal {
-  height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  height: 100%;
 }
 main .principal .contenedorPortada {
-  height: 100%;
-  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 2px;
   background-image: url(../img/bannerdesktop_portada.jpeg);
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 650px) {
+  main .principal .contenedorPortada {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .principal .contenedorPortada {
+    margin-top: 30px;
+  }
 }
 main .principal .contenedorPortada #logoRdt {
   width: 80%;
@@ -53,274 +73,271 @@ main .principal .contenedorPortada #logoRdt {
 }
 @media screen and (max-width: 900px) {
   main .principal .contenedorPortada #logoRdt {
-    width: 100%;
+    width: 80%;
     margin-top: 0px;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (max-width: 650px) {
   main .principal .contenedorPortada #logoRdt {
-    width: 100%;
+    width: 60%;
     margin-top: 0px;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media screen and (max-width: 450px) {
   main .principal .contenedorPortada #logoRdt {
-    width: 100%;
+    width: 60%;
     margin-top: 0px;
+    justify-content: center;
+    align-items: center;
   }
 }
-main .videoContainer {
-  height: 100%;
-  width: 100vw;
-  background-image: url(../img/backgrounddesktop.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+main .portada {
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .videoContainer .AONblanco {
-  width: 70%;
-}
-main .mediaContainer {
-  margin-top: 30px;
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
-}
-main .mediaContainer .spotifyIndex {
-  width: 350px;
-  align-self: center;
-}
-@media screen and (max-width: 450px) {
-  main .mediaContainer .spotifyIndex {
-    width: 270px;
-  }
-}
-@media screen and (max-width: 450px) {
-  main .mediaContainer .videoclipIndex {
-    display: none;
-  }
-}
-@media screen and (max-width: 900px) {
-  main .mediaContainer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 650px) {
-  main .mediaContainer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 450px) {
-  main .mediaContainer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+main .portada #portadacontainer {
+  width: 100vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 /*BIO*/
-main #carouselExample {
-  margin-left: 5%;
-  margin-right: 5%;
+body .page-title {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
-main .contenedorTextoBio {
-  font-family: Roboto;
-  margin: 5% 5% 5% 5%;
-  display: grid;
-  grid-template-columns: 1;
-}
-@media screen and (max-width: 650px) {
-  main .contenedorTextoBio .titulo {
-    text-align: center;
-  }
+body .page-title .title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
 }
 @media screen and (max-width: 450px) {
-  main .contenedorTextoBio .titulo {
-    text-align: center;
+  body .page-title .title {
+    font-size: 2rem;
   }
 }
-main .contenedorTextoBio .texto {
-  text-align: justify;
+body #carrusel-bio {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+body #carrusel-bio #carouselExample {
+  justify-content: center;
+  width: 90%;
+  height: auto;
+}
+body #carrusel-bio #carouselExample .slide-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: xx-large;
+}
+body main {
+  margin-bottom: 60px;
+}
+body main .bio-slides-container {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+body main .bio-slide {
+  width: 90%;
+  height: auto;
+  margin-top: 5px;
 }
 
 /*MÚSICA*/
-main .musicaYouTubeContainer {
-  display: grid;
-  grid-template-columns: repeat(2 1fr);
-  grid-template-rows: repeat(2 1fr);
-  grid-template-areas: "video1 video2" "video3 video4";
-  justify-items: center;
+.zoom:hover {
+  transform: scale(0.9);
+  transition: transform 0.3s;
 }
-main .musicaYouTubeContainer .video1 {
-  grid-area: video1;
+
+body .page-title {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
-main .musicaYouTubeContainer .video2 {
-  grid-area: video2;
-}
-main .musicaYouTubeContainer .video3 {
-  grid-area: video3;
-}
-main .musicaYouTubeContainer .video4 {
-  grid-area: video4;
-}
-@media screen and (max-width: 900px) {
-  main .musicaYouTubeContainer {
-    justify-items: center;
-    grid-template-areas: "video1 video1" "video2 video2" "video3 video3" "video4 video4";
-  }
-  main .musicaYouTubeContainer .video1 {
-    grid-area: video1;
-  }
-  main .musicaYouTubeContainer .video2 {
-    grid-area: video2;
-  }
-  main .musicaYouTubeContainer .video3 {
-    grid-area: video3;
-  }
-  main .musicaYouTubeContainer .video4 {
-    grid-area: video4;
-  }
-}
-@media screen and (max-width: 650px) {
-  main .musicaYouTubeContainer {
-    justify-items: center;
-    grid-template-areas: "video1 video1" "video2 video2" "video3 video3" "video4 video4";
-  }
-  main .musicaYouTubeContainer .video1 {
-    grid-area: video1;
-  }
-  main .musicaYouTubeContainer .video2 {
-    grid-area: video2;
-  }
-  main .musicaYouTubeContainer .video3 {
-    grid-area: video3;
-  }
-  main .musicaYouTubeContainer .video4 {
-    grid-area: video4;
-  }
+body .page-title .title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
 }
 @media screen and (max-width: 450px) {
-  main .musicaYouTubeContainer {
-    justify-items: center;
-    align-content: center;
-    grid-template-areas: "video1 video1" "video2 video2" "video3 video3" "video4 video4";
+  body .page-title .title {
+    font-size: 2rem;
   }
-  main .musicaYouTubeContainer .video1 {
-    grid-area: video1;
+}
+body main {
+  display: grid;
+  justify-items: center;
+}
+body main .section-title {
+  font-family: raleway;
+  font-size: 1rem;
+}
+@media screen and (max-width: 450px) {
+  body main .section-title {
+    font-size: 0.7rem;
   }
-  main .musicaYouTubeContainer .video2 {
-    grid-area: video2;
-  }
-  main .musicaYouTubeContainer .video3 {
-    grid-area: video3;
-  }
-  main .musicaYouTubeContainer .video4 {
-    grid-area: video4;
-  }
+}
+body main .portadas-albums {
+  margin-top: 30px;
+  width: 80%;
+  height: auto;
+}
+body main .portadas-albums .font {
+  font-family: raleway;
+}
+body main .portadas-albums .card-title {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+body .ahoraonunca {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+body .ahoraonunca .card {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 80%;
+  height: auto;
+}
+body .ahoraonunca .card-title-aon {
+  font-size: large;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
 }
 
 /*TIENDA*/
-main #artContainer {
+body .page-title {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+body .page-title .title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+}
+@media screen and (max-width: 450px) {
+  body .page-title .title {
+    font-size: 2rem;
+  }
+}
+body main .container {
   margin-top: 50px;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  grid-template-columns: repeat(2 1fr);
-  grid-template-rows: repeat(2 1fr);
-  column-gap: 15px;
-  row-gap: 15px;
-  grid-template-areas: "art1 art2" "art3 art4";
-}
-main #artContainer .art1 {
-  grid-area: art1;
-}
-main #artContainer .art2 {
-  grid-area: art2;
-}
-main #artContainer .art3 {
-  grid-area: art3;
-}
-main #artContainer .art4 {
-  grid-area: art4;
-}
-main #artContainer .btn {
-  margin-top: 15px;
-}
-main #artContainer .fieldset {
-  font-family: "Roboto";
-  display: grid;
-  align-items: center;
+  margin-bottom: 50px;
 }
 @media screen and (max-width: 900px) {
-  main #artContainer {
-    grid-template-areas: "art1 art1" "art2 art2" "art3 art3" "art4 art4";
+  body main .container .row {
+    display: grid;
+    grid-template-columns: 1;
   }
-  main #artContainer .art1 {
-    grid-area: art1;
+}
+@media screen and (max-width: 650px) {
+  body main .container .row {
+    display: grid;
+    grid-template-columns: 1;
+    margin-left: 10px;
+    margin-right: 10px;
   }
-  main #artContainer .art2 {
-    grid-area: art2;
+}
+@media screen and (max-width: 450px) {
+  body main .container .row {
+    display: grid;
+    grid-template-columns: 1;
+    margin-left: 10px;
+    margin-right: 10px;
   }
-  main #artContainer .art3 {
-    grid-area: art3;
-  }
-  main #artContainer .art4 {
-    grid-area: art4;
-  }
+}
+body main .container .row .carousel-text {
+  font-size: medium;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 /*CONTACTO*/
-main #formContainer {
-  margin: 5% 5% 5% 5%;
+body .page-title {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+body .page-title .title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+}
+@media screen and (max-width: 450px) {
+  body .page-title .title {
+    font-size: 2rem;
+  }
+}
+body main #formContainer {
+  margin-bottom: 50px;
+  margin-top: 50px;
   display: grid;
   justify-items: center;
 }
-main #formContainer #form {
+body main #formContainer .form-title {
+  font-family: "Josefin Sans", sans-serif;
+}
+body main #formContainer #form {
   display: grid;
   justify-items: start;
 }
-main #formContainer #form .col-3 {
+body main #formContainer #form .col-3 {
+  margin-top: 15px;
+  width: 200px;
+}
+body main #formContainer #form .col-md-6 {
   margin-top: 15px;
 }
-main #formContainer #form .col-md-6 {
-  margin-top: 15px;
-}
-main #formContainer #form .col-md-6 #inputEmail4:invalid {
+body main #formContainer #form .col-md-6 #inputEmail4:invalid {
   background-color: white;
   border: none;
   outline: 2px solid red;
   border-radius: 5px;
+  width: 300px;
 }
-main #formContainer #form .col-md-9 {
-  margin-top: 15px;
-}
-@media screen and (max-width: 900px) {
-  main #formContainer #form .col-md-9 #inputMessage {
-    width: 700px;
+@media screen and (max-width: 450px) {
+  body main #formContainer #form .col-md-6 #inputEmail4:invalid {
+    width: 200px;
   }
 }
+body main #formContainer #form .col-md-9 {
+  margin-top: 15px;
+}
+body main #formContainer #form .col-md-9 #inputMessage {
+  width: 600px;
+  height: 300px;
+}
 @media screen and (max-width: 650px) {
-  main #formContainer #form .col-md-9 #inputMessage {
-    width: 500px;
+  body main #formContainer #form .col-md-9 #inputMessage {
+    width: 400px;
+    height: 200px;
   }
 }
 @media screen and (max-width: 450px) {
-  main #formContainer #form .col-md-9 #inputMessage {
-    width: 300px;
+  body main #formContainer #form .col-md-9 #inputMessage {
+    width: 200px;
+    height: 200px;
   }
 }
-main #formContainer #form .col-12 {
+body main #formContainer #form .col-12 {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-main #formContainer #form .button {
+body main #formContainer #form .button {
   margin-top: 30px;
 }
 
@@ -338,11 +355,25 @@ main #formContainer #form .button {
   text-decoration: none;
 }
 .pieDePagina .contenedorfooter .linkRedSocial .icon {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
   text-decoration: none;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+}
+@media screen and (max-width: 450px) {
+  .pieDePagina .contenedorfooter .linkRedSocial .icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
+.pieDePagina .zoom {
+  transition: transform 0.2s;
+}
+.pieDePagina .zoom:hover {
+  transform: scale(1.5);
 }
 
 /*# sourceMappingURL=estilos.css.map */

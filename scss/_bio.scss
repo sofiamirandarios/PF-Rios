@@ -1,27 +1,49 @@
 /*BIO*/
 @use "./_mediaqueries.scss" as *;
 
-
-main{
-    #carouselExample{
-        margin-left: 5%;
-        margin-right: 5%;
-        }
-        .contenedorTextoBio{
-        font-family: Roboto;
-        margin: 5% 5% 5% 5%;
-        display: grid;
-        grid-template-columns: 1;
-            .titulo{
-                @include intermediate{
-                    text-align: center;
-                }
-                @include mobile{
-                    text-align: center;
-                }
-            }
-            .texto{
-                text-align: justify;
+body{
+    .page-title{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        .title{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 3rem;
+            @include mobile{
+                font-size: 2rem;
             }
         }
+    }
+    #carrusel-bio{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        #carouselExample{
+            justify-content: center;
+            width: 90%;
+            height: auto;
+            .slide-text{
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: xx-large;
+            }
+        }
+    }
+    main{
+        margin-bottom: 60px;
+        .bio-slides-container{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            width: 100%;
+            height: auto;
+            }
+            .bio-slide{
+                width: 90%;
+                height: auto;
+                margin-top: 5px;
+            }
+    }
 }

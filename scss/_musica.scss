@@ -1,87 +1,63 @@
 /*MÚSICA*/
 @use "./_mediaqueries.scss" as *;
-main{
-    .musicaYouTubeContainer{
-        display: grid;
-        grid-template-columns: repeat(2 1fr);
-        grid-template-rows: repeat(2 1fr);
-        grid-template-areas: 
-        "video1 video2"
-        "video3 video4";
-        justify-items: center;
-            .video1{
-                grid-area: video1;
-            }
-            .video2{
-                grid-area: video2;
-            }
-            .video3{
-                grid-area: video3;
-            }
-            .video4{
-                grid-area: video4;
-            }
-            @include tablet{
-                justify-items: center;
-                grid-template-areas:
-                "video1 video1"
-                "video2 video2"
-                "video3 video3"
-                "video4 video4";
-                .video1{
-                    grid-area: video1;
-                }
-                .video2{
-                    grid-area: video2;
-                    }
-                .video3{
-                    grid-area: video3;
-                }
-                .video4{
-                    grid-area: video4;
-                }
-            }
-        @include intermediate{
-            justify-items: center;
-            grid-template-areas:
-            "video1 video1"
-            "video2 video2"
-            "video3 video3"
-            "video4 video4";
-                .video1{
-                    grid-area: video1;
-                }
-                .video2{
-                    grid-area: video2;
-                }
-                .video3{
-                    grid-area: video3;
-                }
-                .video4{
-                    grid-area: video4;
-                }
-        }
-        @include mobile{
-            justify-items: center;
-            align-content: center;
-            grid-template-areas:
-            "video1 video1"
-            "video2 video2"
-            "video3 video3"
-            "video4 video4";
-                .video1{
-                    grid-area: video1;
-                }
-                .video2{
-                    grid-area: video2;
-                }
-                .video3{
-                    grid-area: video3;
-                }
-                .video4{
-                    grid-area: video4;
-                }
-        }
 
+
+.zoom:hover {
+    transform: scale(0.9);
+    transition: transform .3s;
+    }
+
+body{
+    .page-title{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        .title{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 3rem;
+            @include mobile{
+                font-size: 2rem;
+            }
+        }
+    }
+    main{
+        .section-title{
+            font-family: raleway;
+            font-size: 1rem;
+            @include mobile{
+                font-size: 0.7rem;
+            }
+        }
+        display: grid;
+        justify-items: center;
+        .portadas-albums{
+            margin-top: 30px;
+            width: 80%;
+            height: auto;
+            .font{
+                font-family: raleway;
+            }
+            .card-title{
+                text-align: center;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+        }
+    }
+    .ahoraonunca{
+        display: grid;
+        justify-items: center;
+        margin-bottom: 40px;
+        .card{
+            margin-top: 30px;
+            margin-bottom: 50px;
+            width: 80%;
+            height: auto;
+        }
+        .card-title-aon{
+            font-size: large;
+            font-family: 'Josefin Sans', sans-serif;
+            text-align: center;
+        }
+        
     }
 }
